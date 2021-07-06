@@ -8,6 +8,13 @@
 
 package main
 
+import (
+	"fmt"
+	"os"
+	"strconv"
+	"strings"
+)
+
 // ---------------------------------------------------------
 // EXERCISE: Math Tables
 //
@@ -105,4 +112,54 @@ package main
 // ---------------------------------------------------------
 
 func main() {
+
+	usage := "Usage: [op=*/+-] [size]"
+
+	if len(os.Args) == 1 {
+		fmt.Println(usage)
+		return
+	}
+
+	op := os.Args[1]
+
+	if x := strings.IndexAny(op, "*/+-"); x < 0 {
+		fmt.Println("Invalid operator.")
+		return
+	}
+
+	size := os.Args[2]
+
+	sizeInt, _ := strconv.Atoi(size)
+
+	fmt.Printf("%-10s", "X")
+
+	for i := 0; i <= sizeInt; i++ {
+		fmt.Printf("%-10d", i)
+	}
+
+	fmt.Println()
+
+	for i := 0; i <= sizeInt; i++ {
+
+		fmt.Printf("%-10d", i)
+
+		var result int
+
+		for j := 0; j <= sizeInt; j++ {
+
+			switch op {
+			case "+":
+				result = i + j
+			case "-":
+				result = i - j
+			case "*":
+				result = i * j
+			}
+
+			fmt.Printf("%-10d", result)
+		}
+
+		fmt.Println()
+	}
+
 }

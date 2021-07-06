@@ -8,6 +8,12 @@
 
 package main
 
+import (
+	"fmt"
+	"math/rand"
+	"time"
+)
+
 // ---------------------------------------------------------
 // EXERCISE: Infinite Kill
 //
@@ -53,4 +59,16 @@ package main
 // ---------------------------------------------------------
 
 func main() {
+
+	t, _ := time.ParseDuration("250ms")
+	char := [4]string{"\\", "-", "/", "|"}
+
+	var i int
+	rand.Seed(time.Now().UnixNano())
+
+	for {
+		i = rand.Intn(4)
+		fmt.Printf("\r%s Please wait, Processing\n", char[i])
+		time.Sleep(time.Duration(t.Microseconds()))
+	}
 }

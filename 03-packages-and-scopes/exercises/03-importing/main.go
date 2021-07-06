@@ -25,8 +25,14 @@ package main
 // ?
 // ?
 
+import (
+	fm1 "fmt"
+	fm2 "fmt"
+)
+
 func main() {
-	// ?
+	fm1.Println("hi")
+	fm2.Println("hello")
 	// ?
 	// ?
 }

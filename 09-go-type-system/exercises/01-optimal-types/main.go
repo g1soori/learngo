@@ -8,6 +8,8 @@
 
 package main
 
+import "fmt"
+
 // ---------------------------------------------------------
 // EXERCISE: Optimal Types
 //
@@ -36,8 +38,12 @@ func main() {
 	// ---
 
 	// an english letter (search web for: ascii control code)
+	var letter byte = 'A'
+	fmt.Printf("%q\n", letter)
 
 	// a non-english letter (search web for: unicode codepoint)
+	var symbol rune = '#'
+	fmt.Printf("%q\n", symbol)
 
 	// a year in 4 digits like 2040
 

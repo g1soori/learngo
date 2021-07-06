@@ -8,6 +8,8 @@
 
 package main
 
+import "fmt"
+
 // ---------------------------------------------------------
 // EXERCISE: Do Some Calculations
 //
@@ -28,4 +30,8 @@ package main
 // ---------------------------------------------------------
 
 func main() {
+	fmt.Println(50 + 25)
+	fmt.Printf("%f\n", 50-15.5)
+	fmt.Printf("%.2f\n", 50*0.5)
+
 }

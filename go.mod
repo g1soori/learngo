@@ -3,6 +3,7 @@ module github.com/inancgumus/learngo
 go 1.13
 
 require (
+	example.com/user/g1go v0.0.0-00010101000000-000000000000 // indirect
 	github.com/fatih/color v1.10.0
 	github.com/guineveresaenger/golang-rainbow v0.0.0-20171201190047-7b6c54e09b61
 	github.com/inancgumus/prettyslice v0.0.0-20190305220808-d802ba58098f
@@ -10,3 +11,5 @@ require (
 	github.com/mattn/go-runewidth v0.0.9
 	golang.org/x/crypto v0.0.0-20201124201722-c8d3bf9c5392 // indirect
 )
+
+replace example.com/user/g1go => /Users/jsooriya/proj/jeewan/learngo/packages/g1go

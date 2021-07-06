@@ -40,7 +40,8 @@ func main() {
 		// notice this one (no more duplication)
 		fallthrough
 	case u == user2 && p == pass2:
-		fmt.Printf(accessOK, u)
+
+		//fmt.Printf(accessOK, u)
 	default:
 		fmt.Printf(errPwd, u)
 	}
